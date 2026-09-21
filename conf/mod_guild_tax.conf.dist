@@ -1,0 +1,70 @@
+[worldserver]
+
+########################################
+# mod-guild-tax configuration
+########################################
+#
+# When a bot earns gold, a small percentage of that income is deposited into
+# ITS OWN guild bank via the real Guild deposit path. Real gold is moved out of
+# the bot's own wallet (never seeded/cheated money, never more than the bot
+# actually holds), so a guild full of bots slowly fills its own bank.
+#
+# Real players are never taxed (only players that have a bot AI are considered).
+#
+# This module was split out of mod-bot-economy so guild taxation can be tuned on
+# its own; it does NOT require DadMode.Enabled.
+#
+
+#
+#    GuildTax.Enable
+#        Master on/off switch for this module. 0 = the module loads but does
+#        nothing.
+#        Default: 1
+#
+GuildTax.Enable = 1
+
+#
+#    GuildTax.OnlyRandomBots
+#        1 = tax only random bots (RNDBOT* accounts). 0 = also tax a real
+#        player's account-alt bots. Real players (no bot AI) are NEVER taxed
+#        either way.
+#        Default: 1
+#
+GuildTax.OnlyRandomBots = 1
+
+#
+#    GuildTax.KillPct
+#        Percentage of a kill's taxable base value (see KillCopperPerLevel) that
+#        is deposited into the bot's guild bank on each creature kill. 0 disables
+#        kill tax.
+#        Default: 1
+#
+GuildTax.KillPct = 1
+
+#
+#    GuildTax.QuestPct
+#        Percentage of a quest's money reward that is deposited into the bot's
+#        guild bank on quest turn-in. 0 disables quest tax.
+#        Default: 1
+#
+GuildTax.QuestPct = 1
+
+#
+#    GuildTax.KillCopperPerLevel
+#        The per-kill taxable base is victimLevel * this value (in copper). The
+#        default of 100 = 1 silver per victim level, so at KillPct=1 a level-20
+#        victim yields ~20 copper of tax. This is a proxy for the loot gold a bot
+#        gains from a kill; it is NOT the bot's whole wallet.
+#        Default: 100
+#
+GuildTax.KillCopperPerLevel = 100
+
+#
+#    GuildTax.MinTaxCopper
+#        Floor (in copper) applied to every taxed event so tiny incomes still
+#        contribute at least this much. The tax is still capped to what the bot
+#        earned this event and to what it actually holds. Set 0 to disable the
+#        floor.
+#        Default: 1
+#
+GuildTax.MinTaxCopper = 1
