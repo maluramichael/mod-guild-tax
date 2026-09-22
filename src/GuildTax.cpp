@@ -79,7 +79,7 @@ namespace
     // the table programmatically and tolerate failure at runtime instead.
     void EnsureSchema()
     {
-        CharacterDatabase.Execute(
+        CharacterDatabase.DirectExecute(
             "CREATE TABLE IF NOT EXISTS `guild_tax_log` ("
             "`id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT, "
             "`bot_guid` INT UNSIGNED NOT NULL, "
