@@ -1,5 +1,10 @@
 # mod-guild-tax
 
+<!-- links:start -->
+[![Support me on Ko-fi](https://malura.de/assets/badge/kofi.svg)](https://malura.de/go/kofi?ref=mod-guild-tax)
+[![Check out my page](https://malura.de/assets/badge/malura.svg)](https://malura.de/go/site?ref=mod-guild-tax)
+<!-- links:end -->
+
 A small, self-contained **guild tax** module for the
 [mod-playerbots](https://github.com/mod-playerbots/azerothcore-wotlk) AzerothCore
 fork (WotLK 3.3.5a).
